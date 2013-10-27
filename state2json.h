@@ -38,8 +38,8 @@
 // saved into.
 #define s2jVALUE _s2jPlease_call_s2jInit_in_scope
 
-#define s2jBEGIN while(0) { if (S2J_ENABLED) {
-#define s2jEND } }
+#define s2jBEGIN do { if (S2J_ENABLED) {
+#define s2jEND } } while(0)
 #define s2jF(FILEDTOACCESS) (*s2jVALUE)[FIELDTOACCESS]
 
 // Must call this before saving any state
