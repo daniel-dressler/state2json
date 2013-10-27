@@ -61,7 +61,7 @@
 #define s2jIncre(FIELD) \
 	s2jBEGIN \
 		int x = (*s2jVALUE).get(FIELD, (int) 0).asInt(); \
-		x = x++; \
+		x++; \
 		s2jF(FIELD) = x; \
 	s2jEND
 
@@ -69,7 +69,7 @@
 #define s2jDecre(FIELD) \
 	s2jBEGIN \
 		int x = (*s2jVALUE).get(FIELD, (int) 0).asInt(); \
-		x = x--; \
+		x--; \
 		s2jF(FIELD) = x; \
 	s2jEND
 
