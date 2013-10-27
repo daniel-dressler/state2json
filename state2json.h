@@ -60,7 +60,7 @@
 // Increments a numberic state field
 #define s2jIncre(FIELD) \
 	s2jBEGIN \
-		int x = s2jF(FIELD); \
+		int x = (*s2jVALUE).get(FIELD, (int) 0).asInt(); \
 		x = x++; \
 		s2jF(FIELD) = x; \
 	s2jEND
@@ -68,7 +68,7 @@
 // Decrements a numberic state field
 #define s2jDecre(FIELD) \
 	s2jBEGIN \
-		int x = s2F(FIELD); \
+		int x = (*s2jVALUE).get(FIELD, (int) 0).asInt(); \
 		x = x--; \
 		s2jF(FIELD) = x; \
 	s2jEND
